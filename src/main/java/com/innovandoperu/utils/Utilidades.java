@@ -6,12 +6,71 @@ public class Utilidades {
 
         for (int x = 0; matriz.length > x; x++) {
             for (int y = 0; matriz[x].length > y; y++) {
-                System.out.print(matriz[x][y] + "\t");
+                System.out.print("\t" + matriz[x][y]);
             }
             System.out.println("");
-            System.out.println("");
+
         }
 
+    }
+
+    public void imprimirMatrizSupIzq(int[][] matriz) {
+        int i, j;
+        int dim = matriz.length;
+        for (i = 0; i < dim; i++) {
+            for (j = 0; j < dim; j++) {
+                if (j < dim - i)
+                    System.out.print("\t" + matriz[i][j]);
+                else
+                    System.out.print("\t ");
+            }
+            System.out.println("");
+        }
+    }
+
+    public void imprimirMatrizInfDer(int[][] matriz) {
+
+        int i, j;
+        int dim = matriz.length;
+        for (i = 0; i < dim; i++) {
+            for (j = 0; j < dim; j++) {
+                if (j + i >= dim - 1)
+                    System.out.print("\t" + matriz[i][j]);
+                else
+                    System.out.print("\t ");
+            }
+            System.out.println("");
+        }
+    }
+
+    public void imprimirMatrizInfIzq(int[][] matriz) {
+
+        int i, j;
+        int dim = matriz.length;
+        for (i = 0; i < dim; i++) {
+            for (j = 0; j < dim; j++) {
+                if (j <= i)
+                    System.out.print("\t" + matriz[i][j]);
+                else
+                    System.out.print("\t ");
+            }
+            System.out.println("");
+        }
+    }
+
+    public void imprimirMatrizSupDer(int[][] matriz) {
+
+        int i, j;
+        int dim = matriz.length;
+        for (i = 0; i < dim; i++) {
+            for (j = 0; j < dim; j++) {
+                if (j >= i)
+                    System.out.print("\t" + matriz[i][j]);
+                else
+                    System.out.print("\t ");
+            }
+            System.out.println("");
+        }
     }
 
 
