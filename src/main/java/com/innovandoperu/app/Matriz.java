@@ -99,6 +99,418 @@ public class Matriz {
 
     }
 
+    public int[][] matriz5() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+        for (i = 0; i < dim; i++) {
+
+            for (j = dim - 1; j >= 0; j--) {
+                if (j + i >= dim - 1) {
+                    matriz[i][j] = direccionBase;
+                    direccionBase++;
+                }
+            }
+
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz6() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+
+        for (i = 0; i < dim; i++) {
+
+            for (j = 0; j < dim; j++) {
+                if (j <= i) {
+                    matriz[i][j] = direccionBase;
+                    direccionBase++;
+                }
+            }
+
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz7() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+
+        for (i = 0; i < dim; i++) {
+
+            for (j = 0; j < dim; j++) {
+                if (j < dim - i) {
+                    matriz[i][j] = direccionBase;
+                    direccionBase++;
+                }
+            }
+
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz8() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+
+        for (i = 0; i < dim; i++) {
+
+            for (j = 0; j < dim; j++) {
+                if (j >= i) {
+                    matriz[i][j] = direccionBase;
+                    direccionBase++;
+                }
+            }
+
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz9() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+        int iInverso = dim - 1;
+
+        for (i = 0; i < dim; i++) {
+            int jInverso = dim - 1;
+            for (j = 0; j < dim; j++) {
+                if (j + i >= dim - 1) {
+                    matriz[i][j] = direccionBase;
+                    direccionBase++;
+                }
+            }
+            iInverso--;
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz10() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+
+        for (i = 0; i < dim; i++) {
+
+            for (j = dim - 1; j >= 0; j--) {
+                if (j <= i) {
+                    matriz[i][j] = direccionBase;
+                    direccionBase++;
+                }
+            }
+
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz11() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+
+        for (i = 0; i < dim; i++) {
+
+            for (j = dim - 1; j >= 0; j--) {
+                if (j < dim - i) {
+                    matriz[i][j] = direccionBase;
+                    direccionBase++;
+                }
+            }
+
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz12() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+
+        for (i = 0; i < dim; i++) {
+
+            for (j = dim - 1; j >= 0; j--) {
+                if (j >= i) {
+                    matriz[i][j] = direccionBase;
+                    direccionBase++;
+                }
+            }
+
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz13() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+
+        for (i = 0; i < dim; i++) {
+
+            for (j = 0; j < dim; j++) {
+                if (j < dim - i) {
+                    matriz[j][i] = direccionBase;
+                    direccionBase++;
+                }
+            }
+
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz14() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+
+        for (i = 0; i < dim; i++) {
+
+            for (j = 0; j < dim; j++) {
+                if (j <= i) {
+                    matriz[j][i] = direccionBase;
+                    direccionBase++;
+                }
+            }
+
+        }
+
+        return matriz;
+    }
+
+
+    public int[][] matriz15() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+        for (i = 0; i < dim; i++) {
+            for (j = dim - 1; j >= 0; j--) {
+                if (i <= j) {
+                    matriz[j][i] = direccionBase;
+                    direccionBase++;
+                }
+            }
+        }
+        return matriz;
+    }
+
+    public int[][] matriz16() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+        for (i = 0; i < dim; i++) {
+            for (j = dim - 1; j >= 0; j--) {
+                if (j + i >= dim - 1) {
+                    matriz[j][i] = direccionBase;
+                    direccionBase++;
+                }
+            }
+        }
+        return matriz;
+    }
+
+    public int[][] matriz17() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+
+        for (i = dim - 1; i >= 0; i--) {
+
+            for (j = 0; j < dim; j++) {
+                if (i >= j) {
+                    matriz[j][i] = direccionBase;
+                    direccionBase++;
+                }
+            }
+
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz18() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+
+        for (i = dim - 1; i >= 0; i--) {
+
+            for (j = 0; j < dim; j++) {
+                if (j < dim - i) {
+                    matriz[j][i] = direccionBase;
+                    direccionBase++;
+                }
+            }
+
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz19() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+
+        for (i = dim - 1; i >= 0; i--) {
+
+            for (j = dim - 1; j >= 0; j--) {
+                if (j + i >= dim - 1) {
+                    matriz[j][i] = direccionBase;
+                    direccionBase++;
+                }
+            }
+
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz20() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+
+        for (i = dim - 1; i >= 0; i--) {
+
+            for (j = dim - 1; j >= 0; j--) {
+                if (j >= i) {
+                    matriz[j][i] = direccionBase;
+                    direccionBase++;
+                }
+            }
+
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz21() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+        boolean bandera = true;
+        for (i = 0; i < dim; i++) {
+
+            if (bandera) {
+                for (j = 0; j < dim; j++) {
+
+                    matriz[j][i] = direccionBase;
+                    direccionBase++;
+
+                }
+                bandera = false;
+            } else {
+                for (j = dim - 1; j >= 0; j--) {
+
+                    matriz[j][i] = direccionBase;
+                    direccionBase++;
+
+                }
+                bandera = true;
+            }
+
+        }
+
+        return matriz;
+    }
+
+    public int[][] matriz22() {
+        int matriz[][];
+        int dim, i, j, direccionBase, item;
+        dim = lt.leer(0, "Ingrese dimensión");
+        matriz = new int[dim][dim];
+        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+
+        boolean bandera = true;
+        for (i = 0; i < dim; i++) {
+
+            if (bandera) {
+                for (j = dim - 1; j >= 0; j--) {
+
+                    matriz[j][i] = direccionBase;
+                    direccionBase++;
+
+                }
+                bandera = false;
+            } else {
+                for (j = 0; j < dim; j++) {
+
+                    matriz[j][i] = direccionBase;
+                    direccionBase++;
+
+                }
+
+                bandera = true;
+            }
+
+        }
+
+        return matriz;
+    }
+
+
     public void imprimirMatriz(int[][] matriz) {
         int dim = matriz.length;
         for (int i = 0; i < dim; i++) {
@@ -115,14 +527,17 @@ public class Matriz {
         int dim = matriz.length;
         for (int i = 0; i < dim; i++) {
             for (int j = 0; j < dim; j++) {
-                if (j < dim - i)
+                if (j < dim - i) {
                     System.out.print("\t" + matriz[i][j]);
-                else
+                } else {
                     System.out.print("\t ");
+                }
+
             }
             System.out.println("");
         }
     }
+
 
     public void imprimirMatrizDerechaInferior(int[][] matriz) {
         int dim = matriz.length;
@@ -143,10 +558,12 @@ public class Matriz {
         int dim = matriz.length;
         for (int i = 0; i < dim; i++) {
             for (int j = 0; j < dim; j++) {
-                if (j >= i)
+                if (j >= i) {
                     System.out.print("\t" + matriz[i][j]);
-                else
+                } else {
                     System.out.print("\t ");
+                }
+
             }
             System.out.println("");
         }
@@ -156,10 +573,11 @@ public class Matriz {
         int dim = matriz.length;
         for (int i = 0; i < dim; i++) {
             for (int j = 0; j < dim; j++) {
-                if (j <= i)
+                if (j <= i) {
                     System.out.print("\t" + matriz[i][j]);
-                else
+                } else {
                     System.out.print("\t ");
+                }
             }
             System.out.println("");
         }
