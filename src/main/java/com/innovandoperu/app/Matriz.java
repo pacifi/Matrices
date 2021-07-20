@@ -13,19 +13,20 @@ public class Matriz {
 //        9	    13
 //        14
         int matriz[][];
-        int dim, i, j, direccionBase, item;
+        int dim, i, j, db, item;
         dim = lt.leer(0, "Ingrese dimensión");
         matriz = new int[dim][dim];
-        direccionBase = lt.leer(0, "Ingrese Dirección Base");
+        db = lt.leer(0, "Ingrese Dirección Base");
 
         for (i = 0; i < dim; i++) {
             for (j = 0; j < dim; j++) {
-                item = direccionBase + (i + j) * (i + j + 1) / 2 + i;
+                item = db + (i + j) * (i + j + 1) / 2 + i;
                 matriz[i][j] = item;
 
             }
         }
         System.out.println("Lectura de asignacion de Matriz");
+<<<<<<< HEAD
         for (i = 0; i < dim; i++) {
             for (j = 0; j < dim; j++) {
                 if (j+i>= dim-1 )
@@ -35,9 +36,20 @@ public class Matriz {
             }
             System.out.println("");
         }
+=======
+
+>>>>>>> c7f96fb527d1b098edd9da71e00390929e358f22
         Utilidades utilidades = new Utilidades();
         System.out.println("ssss");
         utilidades.imprimirMatriz(matriz);
+        System.out.println("");
+        utilidades.imprimirMatrizSupIzq(matriz);
+        System.out.println("");
+        utilidades.imprimirMatrizInfDer(matriz);
+        System.out.println("");
+        utilidades.imprimirMatrizSupDer(matriz);
+        System.out.println("");
+        utilidades.imprimirMatrizInfIzq(matriz);
 
 
     }
@@ -60,16 +72,8 @@ public class Matriz {
             }
         }
 
-        System.out.println("Lectura de Asignacion");
-        for (i = 0; i < dim; i++) {
-            for (j = 0; j < dim; j++) {
-                if (j < dim - i)
-                    System.out.print("\t" + matriz[i][j]);
-                else
-                    System.out.print("\t ");
-            }
-            System.out.println("");
-        }
+        Utilidades utilidades = new Utilidades();
+        utilidades.imprimirMatrizSupIzq(matriz);
 
 
     }
@@ -95,15 +99,8 @@ public class Matriz {
 
         }
         System.out.println("\nLECTURA DE ASIGNACION DE MATRIZ\n");
-        for (i = 0; i < dim; i++) {
-            for (j = 0; j < dim; j++) {
-                if (j < dim - i)
-                    System.out.print("\t" + matriz[i][j]);
-                else
-                    System.out.print("\t ");
-            }
-            System.out.println("");
-        }
+        Utilidades utilidades = new Utilidades();
+        utilidades.imprimirMatrizSupIzq(matriz);
 
 
     }
@@ -128,20 +125,36 @@ public class Matriz {
             }
         }
         System.out.println("\nLECTURA DE ASIGNACION DE MATRIZ\n");
-        for (i = 0; i < dim; i++) {
-            for (j = 0; j < dim; j++) {
-                if (j < dim - i)
-                    System.out.print("\t" + matriz[i][j]);
-                else
-                    System.out.print("\t ");
-            }
-            System.out.println("");
-        }
+        Utilidades utilidades = new Utilidades();
+        utilidades.imprimirMatrizSupIzq(matriz);
 
     }
 
+    public void matrizSuperior() {
+        int matriz[][], dim, i, j, db, item;
+        dim = lt.leer(0, "INGRESAR DIMENSION DE LA MATRIZ : ");
+        matriz = new int[dim][dim];
+        db = lt.leer(0, "Ingrese Dirección Bae");
+        int jInvertido;
+        for (i = 0; i < dim; i++) {
+            jInvertido = dim - 1;
+            for (j = 0; j < dim; j++) {
+                item = db + (i + j) * (i + j + 1) / 2 + i;
+                matriz[i][jInvertido] = item;
+                jInvertido--;
+            }
+        }
+        System.out.println("\nLECTURA DE ASIGNACION DE MATRIZ\n");
+        Utilidades utilidades = new Utilidades();
+        utilidades.imprimirMatriz(matriz);
+
+    }
+
+<<<<<<< HEAD
     // agreando mas código
 
 
+=======
+>>>>>>> c7f96fb527d1b098edd9da71e00390929e358f22
 
 }
