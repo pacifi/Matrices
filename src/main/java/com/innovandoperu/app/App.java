@@ -1,14 +1,16 @@
 package com.innovandoperu.app;
 
-import com.innovandoperu.utils.Utilidades;
 
 public class App {
     public static void main(String[] args) {
         Matriz matriz = new Matriz();
-        matriz.matrizSuperioIzquerdaDesendente();
-//        matriz.matrizTriangularSuperioIzquerdaAscendente();
-//        matriz.matrizSuperiorZigZag();
-//        matriz.matrizSuperiorDerechaZigZagInferior();
+        int[][] mimatriz = matriz.matrizSuperioIzquerdaDesendente();
+        matriz.imprimirMatriz(mimatriz);
+        matriz.imprimirMatrizDerechaSuperior(mimatriz);
+        matriz.imprimirMatrizIzquerdaInferior(mimatriz);
+        matriz.imprimirMatrizIzquierdaSuperior(mimatriz);
+        matriz.imprimirMatrizDerechaInferior(mimatriz);
+
 
     }
 }

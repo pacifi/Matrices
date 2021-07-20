@@ -1,12 +1,12 @@
 package com.innovandoperu.app;
 
 import com.innovandoperu.utils.Teclado;
-import com.innovandoperu.utils.Utilidades;
+
 
 public class Matriz {
     Teclado lt = new Teclado();
 
-    public void matrizSuperioIzquerdaDesendente() {
+    public int[][] matrizSuperioIzquerdaDesendente() {
 //        0	    1	3	6	10
 //        2	    4	7	11
 //        5	    8	12
@@ -25,23 +25,13 @@ public class Matriz {
 
             }
         }
-        System.out.println("Lectura de asignacion de Matriz");
-        for (i = 0; i < dim; i++) {
-            for (j = 0; j < dim; j++) {
-                if (j < dim - i)
-                    System.out.print("\t" + matriz[i][j]);
-                else
-                    System.out.print("\t ");
-            }
-            System.out.println("");
-        }
-        Utilidades utilidades = new Utilidades();
-        utilidades.imprimirMatriz(matriz);
+
+        return matriz;
 
 
     }
 
-    public void matrizTriangularSuperioIzquerdaAscendente() {
+    public int[][] matrizTriangularSuperioIzquerdaAscendente() {
 //        0	    2	5	9	14
 //        1	    4	8	13
 //        3	    7	12
@@ -59,21 +49,10 @@ public class Matriz {
             }
         }
 
-        System.out.println("Lectura de Asignacion");
-        for (i = 0; i < dim; i++) {
-            for (j = 0; j < dim; j++) {
-                if (j < dim - i)
-                    System.out.print("\t" + matriz[i][j]);
-                else
-                    System.out.print("\t ");
-            }
-            System.out.println("");
-        }
-
-
+        return matriz;
     }
 
-    public void matrizSuperiorZigZag() {
+    public int[][] matrizSuperiorZigZag() {
         int matriz[][], dim, i, j, db, item;
 
         dim = lt.leer(0, "INGRESAR DIMENSION DE LA MATRIZ : ");
@@ -93,21 +72,11 @@ public class Matriz {
             }
 
         }
-        System.out.println("\nLECTURA DE ASIGNACION DE MATRIZ\n");
-        for (i = 0; i < dim; i++) {
-            for (j = 0; j < dim; j++) {
-                if (j < dim - i)
-                    System.out.print("\t" + matriz[i][j]);
-                else
-                    System.out.print("\t ");
-            }
-            System.out.println("");
-        }
-
+        return matriz;
 
     }
 
-    public void matrizSuperiorDerechaZigZagInferior() {
+    public int[][] matrizSuperiorDerechaZigZagInferior() {
         int matriz[][], dim, i, j, db, item;
 
 
@@ -126,9 +95,26 @@ public class Matriz {
                 }
             }
         }
-        System.out.println("\nLECTURA DE ASIGNACION DE MATRIZ\n");
-        for (i = 0; i < dim; i++) {
-            for (j = 0; j < dim; j++) {
+        return matriz;
+
+    }
+
+    public void imprimirMatriz(int[][] matriz) {
+        int dim = matriz.length;
+        for (int i = 0; i < dim; i++) {
+            for (int j = 0; j < dim; j++) {
+
+                System.out.print("\t" + matriz[i][j]);
+
+            }
+            System.out.println("");
+        }
+    }
+
+    public void imprimirMatrizIzquierdaSuperior(int[][] matriz) {
+        int dim = matriz.length;
+        for (int i = 0; i < dim; i++) {
+            for (int j = 0; j < dim; j++) {
                 if (j < dim - i)
                     System.out.print("\t" + matriz[i][j]);
                 else
@@ -136,11 +122,48 @@ public class Matriz {
             }
             System.out.println("");
         }
-
     }
 
-    // agreando mas código
-    
+    public void imprimirMatrizDerechaInferior(int[][] matriz) {
+        int dim = matriz.length;
+        for (int i = 0; i < dim; i++) {
+            for (int j = 0; j < dim; j++) {
+                if (j + i >= dim - 1) {
+//                    if (j < dim - i)
+                    System.out.print("\t" + matriz[i][j]);
+                } else {
+                    System.out.print("\t ");
+                }
+            }
+            System.out.println("");
+        }
+    }
+
+    public void imprimirMatrizDerechaSuperior(int[][] matriz) {
+        int dim = matriz.length;
+        for (int i = 0; i < dim; i++) {
+            for (int j = 0; j < dim; j++) {
+                if (j >= i)
+                    System.out.print("\t" + matriz[i][j]);
+                else
+                    System.out.print("\t ");
+            }
+            System.out.println("");
+        }
+    }
+
+    public void imprimirMatrizIzquerdaInferior(int[][] matriz) {
+        int dim = matriz.length;
+        for (int i = 0; i < dim; i++) {
+            for (int j = 0; j < dim; j++) {
+                if (j <= i)
+                    System.out.print("\t" + matriz[i][j]);
+                else
+                    System.out.print("\t ");
+            }
+            System.out.println("");
+        }
+    }
 
 
 }
