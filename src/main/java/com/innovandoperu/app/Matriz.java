@@ -28,7 +28,7 @@ public class Matriz {
         System.out.println("Lectura de asignacion de Matriz");
         for (i = 0; i < dim; i++) {
             for (j = 0; j < dim; j++) {
-                if (j < dim - i)
+                if (j+i>= dim-1 )
                     System.out.print("\t" + matriz[i][j]);
                 else
                     System.out.print("\t ");
@@ -36,6 +36,7 @@ public class Matriz {
             System.out.println("");
         }
         Utilidades utilidades = new Utilidades();
+        System.out.println("ssss");
         utilidades.imprimirMatriz(matriz);
 
 
@@ -140,7 +141,7 @@ public class Matriz {
     }
 
     // agreando mas código
-    
+
 
 
 }
